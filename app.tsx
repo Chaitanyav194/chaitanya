@@ -25,25 +25,17 @@ function App() {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div style={{ padding: "1rem", fontFamily: "Arial" }}>
+    <div >
       {Object.keys(products).map((category) => (
-        <div key={category} style={{ marginBottom: "2rem" }}>
+        <div key={category} >
           <h2>{category}</h2>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+          <div >
             {products[category].map((product) => (
               <div
                 key={product.id}
-                style={{
-                  border: "1px solid #ccc",
-                  padding: "1rem",
-                  width: "200px",
-                  borderRadius: "8px",
-                }}
               >
                 <img
                   src={product.image}
-                  alt={product.title}
-                  style={{ width: "100%", height: "150px", objectFit: "contain" }}
                 />
                 <h4>{product.title}</h4>
                 <p>${product.price}</p>
